@@ -60,7 +60,7 @@ Now that you have imported the `Game` component from the package, you can use it
 
 ```javascript
 import React from "react";
-import { Game } from "your-package-name";
+import { Game } from "dice-game-david-pegueroles";
 
 function App() {
   return (

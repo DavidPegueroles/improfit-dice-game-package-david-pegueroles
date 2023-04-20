@@ -16,19 +16,9 @@ const Game = () => {
   } = useDiceGame();
 
   const INPUT_LABEL = "Please, select a number of dices to begin with.";
-
-  const winModalBody = () => {
-    const title = "Congratulations!!";
-    const bodyText = "You just won!";
-    const buttonText = "Try again";
-
-    return (
-      <Modal show={gameState.currentState === "won"} title={title}>
-        <p>{bodyText}</p>
-        <Button onClick={handleResetGame}>{buttonText}</Button>
-      </Modal>
-    );
-  };
+  const MODAL_TITLE = "Congratulations!!";
+  const NODAL_BODY = "You just won!";
+  const MODAL_BUTTON_TEXT = "Try again";
 
   return (
     <>
@@ -47,7 +37,12 @@ const Game = () => {
         />
       )}
 
-      {gameState.currentState === "won" && winModalBody()}
+      {gameState.currentState === "won" && (
+        <Modal show={gameState.currentState === "won"} title={MODAL_TITLE}>
+          <p>{NODAL_BODY}</p>
+          <Button onClick={handleResetGame}>{MODAL_BUTTON_TEXT}</Button>
+        </Modal>
+      )}
     </>
   );
 };
