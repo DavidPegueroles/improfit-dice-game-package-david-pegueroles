@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FormContainer = styled.form`
   display: flex;
+  flex-direction: column;
   row-gap: 0.5rem;
 
   .form-input {

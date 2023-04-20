@@ -25,18 +25,23 @@ const NumberInput = ({ label, onSubmit }) => {
   return (
     <>
       <FormContainer className="form" onSubmit={handleNumberOfDices}>
-        <label htmlFor="dice-number">{label}</label>
-        <input
-          className="form-input"
-          id="dice-number"
-          min="1"
-          onChange={handleOnChange}
-          type="number"
-        />
+        <label className="form-label" htmlFor="dice-number">
+          {label}
+        </label>
 
-        <button className="form-button" type="submit" disabled={!inputValue}>
-          {SUBMIT_TEXT}
-        </button>
+        <div>
+          <input
+            className="form-input"
+            id="dice-number"
+            min="1"
+            onChange={handleOnChange}
+            type="number"
+          />
+
+          <button className="form-button" type="submit" disabled={!inputValue}>
+            {SUBMIT_TEXT}
+          </button>
+        </div>
       </FormContainer>
     </>
   );
