@@ -1,70 +1,75 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech stack
 
-## Available Scripts
+- ⚛️ Declarative Components in [React](https://reactjs.org/).
 
-In the project directory, you can run:
+- 💅 [Styled Components](https://styled-components.com/) for the global styles control of the Desing System (components) and the ui.
 
-### `npm start`
+- ✅ Unit testing with [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for the assertions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Clone repository
 
-### `npm test`
+```bash
+git clone https://github.com/DavidPegueroles/improfit-dice-game-package-david-pegueroles.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install dependencies
 
-### `npm run build`
+To install all dependencies. From the root project run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm i
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Run the app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In order to run the app, you must run the following script:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This command will run a [local server](http://localhost:3000) at port 3000 if available.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to use the npm package
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Follow these steps to use the npm package you've created:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Step 1: Install Node.js and npm
 
-## Learn More
+Make sure you have Node.js and npm installed on your system. If you don't, download it from the official website: [https://nodejs.org/](https://nodejs.org/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Step 2: Navigate to your project folder
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open the terminal and navigate to the project folder where you want to use the package.
 
-### Code Splitting
+### Step 3: Install the package
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Install the package by running the following command:
 
-### Analyzing the Bundle Size
+```bash
+npm install dice-game-david-pegueroles
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Step 5: Import and use the package into your project
 
-### Making a Progressive Web App
+Now that you have imported the `Game` component from the package, you can use it in your project. Depending on the framework or library you are using, the way you incorporate the component might vary. Here's an example of how to use the `Game` component in a React application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```javascript
+import React from "react";
+import { Game } from "your-package-name";
 
-### Advanced Configuration
+function App() {
+  return (
+    <div className="App">
+      <h1>My Dice Game</h1>
+      <Game />
+    </div>
+  );
+}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default App;
+```
