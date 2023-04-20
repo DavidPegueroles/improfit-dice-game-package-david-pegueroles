@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { FormContainer } from "./Input.style";
+import { FormContainer } from "./NumberInput.style";
 
 const NumberInput = ({ label, onSubmit }) => {
   const SUBMIT_TEXT = "Select";
@@ -24,13 +24,14 @@ const NumberInput = ({ label, onSubmit }) => {
 
   return (
     <>
-      {label}
       <FormContainer className="form" onSubmit={handleNumberOfDices}>
+        <label htmlFor="dice-number">{label}</label>
         <input
           className="form-input"
-          type="number"
-          onChange={handleOnChange}
+          id="dice-number"
           min="1"
+          onChange={handleOnChange}
+          type="number"
         />
 
         <button className="form-button" type="submit" disabled={!inputValue}>
