@@ -6,7 +6,7 @@ const Dice = ({ number }) => {
 
   const dots = (number) =>
     Array.from({ length: number }, (_, index) => (
-      <div key={index} className="dice-dot"></div>
+      <div key={index} className="dice-dot" data-testid="dice-dot"></div>
     ));
 
   return (
